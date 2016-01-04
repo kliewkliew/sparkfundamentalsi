@@ -9,7 +9,9 @@ Spark combines SQL, streaming and complex analytics together seamlessly in the s
 - - - -
 ### Environment ###
 **Hadoop** 2.6.0
-**Spark** 1.5.1
+
+**Spark** 1.5.
+
 Start the container
 `docker rm sparkfun`
 `docker run -d --name sparkfun kliew/sparkfundamentalsi -d`

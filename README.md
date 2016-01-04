@@ -13,12 +13,11 @@ Spark combines SQL, streaming and complex analytics together seamlessly in the s
 **Spark** 1.5.
 
 Start the container
-
-`docker rm sparkfun`
-
-`docker run -d --name sparkfun kliew/sparkfundamentalsi -d`
-
-`docker exec -it sparkfun bash`
+```
+docker rm sparkfun
+docker run -d --name sparkfun kliew/sparkfundamentalsi -d
+docker exec -it sparkfun bash
+```
 
 #### Exercise 3: Scala program to estimate the value of Pi ####
 *A basic Spark application that parallelizes the computation of Pi*

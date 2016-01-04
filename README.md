@@ -25,7 +25,7 @@ docker exec -it sparkfun bash
 $SPARK_HOME/bin/spark-submit \
     --class "SparkPi" \
     --master local[4] \
-    SparkPi/target/scala-2.10/sparkpi-project_2.10-1.0.jar
+    SparkPi/target/scala-2.10/spark-pi-project_2.10-1.0.jar
 ```
 
 #### Exercise 4.1: Spark SQL program to find the ten hottest days with precipitation in NYC, 2013
@@ -34,7 +34,7 @@ $SPARK_HOME/bin/spark-submit \
 $SPARK_HOME/bin/spark-submit \
   --class "SparkSQL" \
   --master local[4] \
-  SparkSQL/target/scala-2.10/sparksql-project_2.10-1.0.jar
+  SparkSQL/target/scala-2.10/spark-sql-project_2.10-1.0.jar
 ```
 #### Exercise 4.2: Spark MLlib program to find the best location to hail a cab in NYC, 2013 ####
 *In this section, the Spark shell will be used to acquire the K-Means clustering for drop-off latitudes and longitudes of taxis for 3 clusters. The sample data contains a subset of taxi trips with hack license, medallion, pickup date/time, drop off date/time, pickup/drop off latitude/longitude, passenger count, trip distance, trip time and other information. As such, this may give a good indication of where to best to hail a cab.  
@@ -43,7 +43,7 @@ The data file can be found on the HDFS under /tmp/labdata/sparkdata/nyctaxisub.c
 $SPARK_HOME/bin/spark-submit \
   --class "SparkMLlib" \
   --master local[4] \
-  SparkMLlib/target/scala-2.10/sparkmllib-project_2.10-1.0.jar
+  SparkMLlib/target/scala-2.10/spark-mllib-project_2.10-1.0.jar
 ```
 #### Exercise 4.3: Spark Streaming program to process streams of data ####
 *This section focuses on Spark Streams, an easy to build, scalable, stateful (e.g. sliding windows) stream processing library. Streaming jobs are written the same way Spark batch jobs are coded and support Java, Scala and Python. In this exercise, taxi trip data will be streamed using a socket connection and then analyzed to provide a summary of number of passengers by taxi vendor. This will be implemented in the Spark shell using Scala. 
@@ -61,7 +61,7 @@ Run the application in your main terminal
 $SPARK_HOME/bin/spark-submit \
   --class "SparkStreaming" \
   --master local[4] \
-  SparkStreaming/target/scala-2.10/sparkstreaming-project_2.10-1.0.jar
+  SparkStreaming/target/scala-2.10/spark-streaming-project_2.10-1.0.jar
 ```
 
 #### Exercise 4.4: Spark GraphX program to compute the page rank of users in a sample social network graph ####
@@ -70,5 +70,5 @@ $SPARK_HOME/bin/spark-submit \
 $SPARK_HOME/bin/spark-submit \
   --class "SparkGraphX" \
   --master local[4] \
-  SparkGraphX/target/scala-2.10/sparkgraphx-project_2.10-1.0.jar
+  SparkGraphX/target/scala-2.10/spark-graphx-project_2.10-1.0.jar
 ```

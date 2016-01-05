@@ -10,7 +10,7 @@ Spark combines SQL, streaming and complex analytics together seamlessly in the s
 ### Environment ###
 **Hadoop** 2.6.0
 
-**Spark** 1.5.
+**Spark** 1.5.1
 
 Start the container
 ```

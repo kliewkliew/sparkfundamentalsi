@@ -12,6 +12,9 @@ Spark combines SQL, streaming and complex analytics together seamlessly in the s
 
 **Spark** 1.5.1
 
+I have containerized the Spark-Hadoop stack with the precompiled Scala projects. To demo the finished product, install Docker and follow the instructions below.
+
+
 Start the container
 ```
 docker kill sparkfun

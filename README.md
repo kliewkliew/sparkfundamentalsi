@@ -23,9 +23,13 @@ docker rm sparkfun
 docker run -d --name sparkfun kliew/sparkfundamentalsi -d
 docker exec -it sparkfun bash
 ```
+You now have a terminal into the guest container.
 
 #### Exercise 3: Scala program to estimate the value of Pi ####
 *A basic Spark application that parallelizes the computation of Pi*
+
+In the guest terminal, run:
+
 ```
 $SPARK_HOME/bin/spark-submit \
     --class "SparkPi" \
@@ -55,20 +59,20 @@ $SPARK_HOME/bin/spark-submit \
 There are two files under /home/virtuser/labdata/streams. The first one is the nyctaxi100.csv which will serve as the source of the stream. The other file is a python file, taxistreams.py, which will feed the csv file through a socket connection to simulate a stream.  
 Once started, the program will bind and listen to the localhost socket 7777. When a connection is made, it will read ‘nyctaxi100.csv’ and send across the socket. The sleep is set such that one line will be sent every 0.5 seconds, or 2 rows a second. This was intentionally set to a high value to make it easier to view the data during execution.*
 
-Start the stream in a second terminal
+Start the stream in a host terminal
 ```
 docker exec -it sparkfun python \
   /opt/ibm/labfiles/streams/taxistreams.py
 ```
 
-Run the application in your main terminal
+Run the application in the guest terminal
 ```
 $SPARK_HOME/bin/spark-submit \
   --class "SparkStreaming" \
   --master local[4] \
   SparkStreaming/target/scala-2.10/spark-streaming-project_2.10-1.0.jar
 ```
-Exit the stream terminal when you are satisfied.
+Exit the stream and application when you are satisfied.
 
 #### Exercise 4.4: Spark GraphX program to compute the page rank of users in a sample social network graph ####
 *The following exercise uses computes the page rank of users in a social network. It computes on a small set of data but can be applied to social networks such as Twitter and other graph relationships.*

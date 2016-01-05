@@ -3,6 +3,7 @@ Big Data University: Spark Fundamentals I (BD095EN) Version #1: Updated: Septemb
 
 ### Course Description ###
 http://bigdatauniversity.com/courses/spark-fundamentals/
+
 Apache Spark is an open source processing engine built around speed, ease of use, and analytics. If you have large amounts of data that requires low latency processing that a typical Map Reduce program cannot provide, Spark is the alternative. Spark performs at speeds up to 100 times faster than Map Reduce for iterative algorithms or interactive data mining. Spark provides in-memory cluster computing for lightning fast speed and supports Java, Scala, and Python APIs for ease of development.
 
 Spark combines SQL, streaming and complex analytics together seamlessly in the same application to handle a wide range of data processing scenarios. Spark runs on top of Hadoop, Mesos, standalone, or in the cloud. It can access diverse data sources such as HDFS, Cassandra, HBase, or S3.

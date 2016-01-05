@@ -14,6 +14,7 @@ Spark combines SQL, streaming and complex analytics together seamlessly in the s
 
 Start the container
 ```
+docker kill sparkfun
 docker rm sparkfun
 docker run -d --name sparkfun kliew/sparkfundamentalsi -d
 docker exec -it sparkfun bash
@@ -63,6 +64,7 @@ $SPARK_HOME/bin/spark-submit \
   --master local[4] \
   SparkStreaming/target/scala-2.10/spark-streaming-project_2.10-1.0.jar
 ```
+Exit the stream terminal when you are satisfied.
 
 #### Exercise 4.4: Spark GraphX program to compute the page rank of users in a sample social network graph ####
 *The following exercise uses computes the page rank of users in a social network. It computes on a small set of data but can be applied to social networks such as Twitter and other graph relationships.*
